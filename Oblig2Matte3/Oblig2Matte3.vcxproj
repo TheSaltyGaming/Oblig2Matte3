@@ -159,12 +159,14 @@
   <ItemGroup>
     <ClCompile Include="FileManager.cpp" />
     <ClCompile Include="glad.c" />
+    <ClCompile Include="MatrixMath.cpp" />
     <ClCompile Include="Oblig2Matte3.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Vertex.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileManager.h" />
+    <ClInclude Include="MatrixMath.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Vertex.h" />
   </ItemGroup>
