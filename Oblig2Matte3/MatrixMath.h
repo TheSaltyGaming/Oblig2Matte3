@@ -18,10 +18,17 @@ public:
     float ax = 0.0f;
     float bx = 0.0f;
     float cx = 0.0f;
+
+    float ax2 = 0.0f;
+    float bx2 = 0.0f;
+    float cx2 = 0.0f;
+    float dx2 = 0.0f;
+    
     glm::mat4x3 CreateMatrix(float x, float y, float z);
 
     void Fillvector();
     void MatrixCalculations();
+    void MatrixInterpolation();
     std::vector<Vertex> WriteDataPoints();
 
 private:

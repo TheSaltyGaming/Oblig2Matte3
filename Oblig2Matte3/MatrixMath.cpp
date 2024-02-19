@@ -38,6 +38,29 @@ void MatrixMath::MatrixCalculations()
     
 }
 
+void MatrixMath::MatrixInterpolation()
+{
+    Eigen::MatrixXf A(4, 4);
+    Eigen::VectorXf b(4);
+
+    A <<27.0, 9.0, 3.0, 1.0,
+          125.0, 25.0, 5.0, 1.0,
+          343.0,  49.0, 7.0, 1.0,
+          512.0,  64.0, 8.0, 1.0;
+    b << 5.0, 2.0, 4.0, 6.0;
+    
+
+    
+    Eigen::VectorXf solution = A.inverse() * b;
+
+    
+    std::cout << "The interpolation coefficients  [a, b, c, d]  is:\n" << solution << std::endl;
+     ax2 = solution[0];
+     bx2 = solution[1];
+     cx2 = solution[2];
+     dx2 = solution[3];
+}
+
 std::vector<Vertex> MatrixMath::WriteDataPoints()
 {
     std::vector<Vertex> mVertices;
@@ -65,4 +88,6 @@ long double MatrixMath::f(double x)
 {
     return ax*x*x + bx*x + cx;
 }
+
+
     

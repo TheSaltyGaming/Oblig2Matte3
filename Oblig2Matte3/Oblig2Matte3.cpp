@@ -54,6 +54,8 @@ int main()
     test.MatrixCalculations();
     std::vector<Vertex> points = test.WriteDataPoints();
     std::vector<float> floats = fileManager.convertPointsToFloats(points, 1/60.0f);
+
+    test.MatrixInterpolation();
     
     GLFWwindow* window;
     unsigned shaderProgram, VBO, VAO, EBO;
