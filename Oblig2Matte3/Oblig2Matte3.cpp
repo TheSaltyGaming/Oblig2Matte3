@@ -9,11 +9,13 @@
 #include <windows.h>
 
 #include "FileManager.h"
+#include "MatrixMath.h"
 #include "Shader.h"
 
 
 #pragma region Public Variables
 
+MatrixMath test;
 FileManager fileManager;
 Shader shader;
 
@@ -49,8 +51,9 @@ const char *fragmentShaderSource = fragmentShaderSourceString.c_str();
 
 int main()
 {
-    std::vector<Vertex> points = fileManager.readPointsFromFile("datapunkter.txt");
-    std::vector<float> floats = fileManager.convertPointsToFloats(points, 1/9.9f);
+    test.MatrixCalculations();
+    std::vector<Vertex> points = test.WriteDataPoints();
+    std::vector<float> floats = fileManager.convertPointsToFloats(points, 1/60.0f);
     
     GLFWwindow* window;
     unsigned shaderProgram, VBO, VAO, EBO;
@@ -75,8 +78,6 @@ int main()
 }
 
 
-//FLytta mye setup ut av main for å gjøre det lettere å lese
-//Vi kan flytte den inn igjen om du fløler det er lettere
 void setup(GLFWwindow*& window, unsigned& shaderProgram, unsigned& VBO, unsigned& VAO, unsigned& EBO,
                int& vertexColorLocation, int& value1, std::vector<float> floats)
 {
