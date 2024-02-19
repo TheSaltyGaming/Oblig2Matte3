@@ -30,6 +30,7 @@ public:
     void MatrixCalculations();
     void MatrixInterpolation();
     std::vector<Vertex> WriteDataPoints();
+    std::vector<Vertex> WriteDataPoints2();
 
 private:
     long double a = -50.0; // Startpunkt
@@ -38,4 +39,5 @@ private:
     long double h = (b-a)/num_points;
 
     long double f(double x);
+    long double f2(double x);
 };

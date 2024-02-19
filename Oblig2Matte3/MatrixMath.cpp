@@ -84,9 +84,37 @@ std::vector<Vertex> MatrixMath::WriteDataPoints()
     return mVertices;
 }
 
+std::vector<Vertex> MatrixMath::WriteDataPoints2()
+{
+    std::vector<Vertex> mVertices;
+    for (int i = 0; i < num_points; ++i)
+    {
+        long double x = a + i * h; // Beregn x-verdien
+        
+        long double y = f2(x); // Beregn y-verdien
+        
+
+        Vertex vertex;
+        vertex.x = x;
+        vertex.y = y;
+        vertex.z = 0.0f;
+        
+        vertex.r = 0.0f;
+        vertex.g = 0.0f;
+        vertex.b = 1.0f;
+        mVertices.push_back(vertex);
+    }
+    return mVertices;
+}
+
 long double MatrixMath::f(double x)
 {
     return ax*x*x + bx*x + cx;
+}
+
+long double MatrixMath::f2(double x)
+{
+    return ax2*x*x*x + bx2*x*x + cx2*x + dx2;
 }
 
 

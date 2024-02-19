@@ -51,11 +51,14 @@ const char *fragmentShaderSource = fragmentShaderSourceString.c_str();
 
 int main()
 {
-    test.MatrixCalculations();
-    std::vector<Vertex> points = test.WriteDataPoints();
-    std::vector<float> floats = fileManager.convertPointsToFloats(points, 1/60.0f);
+    // test.MatrixCalculations();
+    // std::vector<Vertex> points = test.WriteDataPoints();
+    // std::vector<float> floats = fileManager.convertPointsToFloats(points, 1/60.0f);
 
     test.MatrixInterpolation();
+    std::vector<Vertex> points = test.WriteDataPoints2();
+    std::vector<float> floats = fileManager.convertPointsToFloats(points, 1/60.0f);
+    
     
     GLFWwindow* window;
     unsigned shaderProgram, VBO, VAO, EBO;
