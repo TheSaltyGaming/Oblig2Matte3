@@ -54,7 +54,7 @@ void MatrixMath::MatrixInterpolation()
     Eigen::VectorXf solution = A.inverse() * b;
 
     
-    std::cout << "The interpolation coefficients  [a, b, c, d]  is:\n" << solution << std::endl;
+    std::cout << "The interpolation coefficients  [a, b, c, d]  are:\n" << solution << std::endl;
      ax2 = solution[0];
      bx2 = solution[1];
      cx2 = solution[2];
@@ -107,11 +107,13 @@ std::vector<Vertex> MatrixMath::WriteDataPoints2()
     return mVertices;
 }
 
+//Least squares function
 long double MatrixMath::f(double x)
 {
     return ax*x*x + bx*x + cx;
 }
 
+//Interpolation function
 long double MatrixMath::f2(double x)
 {
     return ax2*x*x*x + bx2*x*x + cx2*x + dx2;

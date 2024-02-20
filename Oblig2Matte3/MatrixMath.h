@@ -33,8 +33,8 @@ public:
     std::vector<Vertex> WriteDataPoints2();
 
 private:
-    long double a = -50.0; // Startpunkt
-    long double b = 50.0;  // Sluttpunkt
+    long double a = -20.0; // Startpunkt
+    long double b = 20.0;  // Sluttpunkt
     int num_points = 200; // Antall datapunkter
     long double h = (b-a)/num_points;
 

@@ -51,10 +51,15 @@ const char *fragmentShaderSource = fragmentShaderSourceString.c_str();
 
 int main()
 {
+
+    //UNCOMMENT THIS PART TO RUN THE FIRST PART OF THE OBLIG
+    
     // test.MatrixCalculations();
     // std::vector<Vertex> points = test.WriteDataPoints();
     // std::vector<float> floats = fileManager.convertPointsToFloats(points, 1/60.0f);
 
+    //UNCOMMENT THIS PART TO RUN THE SECOND PART OF THE OBLIG.
+    //In it's current state, both parts cannot be run at once. 
     test.MatrixInterpolation();
     std::vector<Vertex> points = test.WriteDataPoints2();
     std::vector<float> floats = fileManager.convertPointsToFloats(points, 1/60.0f);
